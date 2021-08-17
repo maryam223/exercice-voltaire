@@ -1,0 +1,362 @@
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-BoldItalic.eot');
+    src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'), url('font/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-BoldItalic.woff') format('woff'), url('font/GothamPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-Italic.eot');
+    src: local('Gotham Pro Italic'), local('GothamPro-Italic'), url('font/GothamPro-Italic.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-Italic.woff') format('woff'), url('font/GothamPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-Medium.eot');
+    src: local('Gotham Pro Medium'), local('GothamPro-Medium'), url('font/GothamPro-Medium.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-Medium.woff') format('woff'), url('font/GothamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-BlackItalic.eot');
+    src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'), url('font/GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-BlackItalic.woff') format('woff'), url('font/GothamPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-Bold.eot');
+    src: local('Gotham Pro Bold'), local('GothamPro-Bold'), url('font/GothamPro-Bold.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-Bold.woff') format('woff'), url('font/GothamPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro Narrow';
+    src: url('font/GothamProNarrow-Bold.eot');
+    src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'), url('font/GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'), url('font/GothamProNarrow-Bold.woff') format('woff'), url('font/GothamProNarrow-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro Narrow';
+    src: url('font/GothamProNarrow-Medium.eot');
+    src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'), url('font/GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'), url('font/GothamProNarrow-Medium.woff') format('woff'), url('font/GothamProNarrow-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-LightItalic.eot');
+    src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'), url('font/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-LightItalic.woff') format('woff'), url('font/GothamPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-Light.eot');
+    src: local('Gotham Pro Light'), local('GothamPro-Light'), url('font/GothamPro-Light.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-Light.woff') format('woff'), url('font/GothamPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-Black.eot');
+    src: local('Gotham Pro Black'), local('GothamPro-Black'), url('font/GothamPro-Black.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-Black.woff') format('woff'), url('font/GothamPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro.eot');
+    src: local('Gotham Pro'), local('GothamPro'), url('font/GothamPro.eot?#iefix') format('embedded-opentype'), url('font/GothamPro.woff') format('woff'), url('font/GothamPro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('font/GothamPro-MediumItalic.eot');
+    src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'), url('font/GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'), url('font/GothamPro-MediumItalic.woff') format('woff'), url('font/GothamPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+html,
+body {
+    font-family: 'Gotham Pro';
+}
+
+h1 {
+    font-size: 3vw;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+button {
+    font-size: 1rem;
+    background: unset;
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: 16px;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+}
+
+header h1 {
+    margin-top: 300px;
+    margin-left: -88px;
+    font-weight: 200;
+}
+
+header img {
+    transform: translate(-124px, -200px);
+}
+
+main {
+    margin: 0 96px;
+}
+
+.top-articles {
+    margin-top: -200px;
+}
+
+#top-articles {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.top-articles .article-top {
+    width: 480px;
+    height: 385px;
+}
+
+.top-1 {
+    background-color: #f7f6f1;
+}
+
+.top-2 {
+    background-color: #01483E;
+    color: #fff;
+}
+
+.article-top div {
+    display: grid;
+    place-items: center;
+}
+
+.top-articles img {
+    height: 280px;
+}
+
+.top-articles p {
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.voir {
+    margin-top: -20px;
+    margin-left: 280px!important;
+    font-weight: 400!important;
+    visibility: hidden;
+}
+
+.article-top:hover .voir {
+    visibility: visible;
+}
+
+.prix {
+    color: #A4A4A4;
+    font-weight: 100;
+}
+
+.top-articles .prix {
+    font-size: 1rem;
+}
+
+.article,
+.article-img {
+    display: flex;
+}
+
+.article {
+    justify-content: space-between;
+}
+
+.articles h2 {
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+    margin-top: 100px;
+}
+
+.article-img {
+    margin-top: 20px;
+}
+
+.article-focus {
+    display: grid;
+    place-items: center;
+    margin-top: 28px;
+    transform: translateX(-50px);
+    width: 500px;
+}
+
+.article-min {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.articles .tri {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles img {
+    height: 384px;
+}
+
+figure.imghvr-push-up {
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+
+.articles .vue {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-gap: 52px 24px;
+}
+
+.articles p {
+    font-weight: 500;
+}
+
+.pages {
+    display: grid;
+    place-items: center;
+}
+
+.article-focus img {
+    height: 500px;
+}
+
+.min-fond {
+    width: 140px;
+    height: 140px;
+    background-color: #f7f6f1;
+}
+
+.article h1 {
+    font-style: unset;
+}
+
+.article p {
+    text-align: justify;
+}
+
+.article .description {
+    width: 400px;
+    font-size: 1rem;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article .price {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.article .avis {
+    margin-top: -24px;
+}
+
+.article a {
+    color: #000;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.article a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.informations {
+    margin-top: 24px;
+}
+
+.informations p {
+    width: 640px;
+    text-align: justify;
+}
+
+.informations div {
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 0;
+}
+
+.see-more h3 {
+    font-weight: 500;
+}
+
+.see-more img {
+    height: 150px;
+    margin: 8px 20px;
+}
+
+hr {
+    border: 0.1em solid black;
+    border-bottom: unset;
+    border-left: unset;
+    border-right: unset;
+}
+
+.see-four {
+    color: #A4A4A4;
+}
+
+.qty input {
+    width: 28px;
+    margin-left: 12px;
+    text-align: center;
+}
