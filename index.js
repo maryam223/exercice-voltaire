@@ -49,7 +49,7 @@ function play() {
     //----------------DEPOSER ET CREER LA FORME--------------------//
 
 
-    //var geometry = new THREE.IcosahedronGeometry(30, 2);
+    var geometry = new THREE.IcosahedronGeometry(30, 2);
 
     let ballMaterial = new THREE.MeshBasicMaterial({
         color: 0x5cefff,
@@ -61,13 +61,13 @@ function play() {
         linejoin: 'round'
     });
 
-    //var ball = new THREE.Mesh(geometry, ballMaterial);
-    //ball.position.set(0, 0, 0);
-    //group.add(ball);
+    var ball = new THREE.Mesh(geometry, ballMaterial);
+    ball.position.set(0, 0, 0);
+    group.add(ball);
 
-    //console.log("groupe", ball);
+    console.log("groupe", ball);
 
-    // scene.add(group);
+    scene.add(group);
 
     document.getElementById('out').appendChild(renderer.domElement);
 
@@ -81,11 +81,16 @@ function play() {
 
     function render() {
 
-        //group.rotation.y += 0.005;
+        analyser.getByteFrequencyData(dataArray);
 
+        var lowerHalfArray = dataArray.slice(0, (dataArray.length / 2) - 1);
 
-        var distancePrevious = 0;
-        var distance = 0;
+        var lowerMax = max(lowerHalfArray);
+
+        var lowerMaxFr = lowerMax / lowerHalfArray.length;
+        var distance = modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8);
+
+        console.log(distance);
 
         function updateGeometry(mesh, geometry) {
             mesh.geometry.dispose();
@@ -93,40 +98,22 @@ function play() {
             // these do not update nicely together if shared
         }
 
-
         function createGeometry() {
-            analyser.getByteFrequencyData(dataArray);
-
-            var lowerHalfArray = dataArray.slice(0, (dataArray.length / 2) - 1);
-
-            var lowerMax = max(lowerHalfArray);
-
-            var lowerMaxFr = lowerMax / lowerHalfArray.length;
-
-            distance = Math.round(modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8));
-
-            console.log("distance", distance);
-            return new THREE.IcosahedronGeometry(30, distance);
+            return new THREE.IcosahedronGeometry(30, 2);
         }
 
         var mesh = new THREE.Mesh(createGeometry(), ballMaterial);
-        console.log('mesh', mesh);
         scene.add(mesh);
         var animate = function() {
-            if (distancePrevious != distance) {
-                updateGeometry(mesh, createGeometry())
-                distancePrevious = distance;
-            }
             updateGeometry(mesh, createGeometry())
-
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
+            console.log(mesh);
+            //requestAnimationFrame(animate);
+            //renderer.render(scene, camera);
         };
 
         animate();
-
-        //renderer.render(scene, camera);
-        // requestAnimationFrame(render);
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
     }
 
     function onWindowResize() {
