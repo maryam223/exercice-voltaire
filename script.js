@@ -39,6 +39,7 @@ function play() {
 
     camera.position.z = 100;
 
+
     var renderer = new THREE.WebGLRenderer();
     renderer.setClearColor(0x1d1152);
 
@@ -87,6 +88,8 @@ function play() {
         var distancePrevious = 0;
         var distance = 0;
 
+        var ratio = 0;
+
         function updateGeometry(mesh, geometry) {
             mesh.geometry.dispose();
             mesh.geometry = geometry;
@@ -98,15 +101,23 @@ function play() {
             analyser.getByteFrequencyData(dataArray);
 
             var lowerHalfArray = dataArray.slice(0, (dataArray.length / 2) - 1);
+            var upperHalfArray = dataArray.slice((dataArray.length / 2) - 1, dataArray.length - 1);
 
             var lowerMax = max(lowerHalfArray);
+            var upperAvg = avg(upperHalfArray);
 
             var lowerMaxFr = lowerMax / lowerHalfArray.length;
+            var upperAvgFr = upperAvg / upperHalfArray.length;
+            distance = Math.round(modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8) + modulate(upperAvgFr, 0, 1, 0, 4));
 
-            distance = Math.round(modulate(Math.pow(lowerMaxFr, 0.8), 0, 1, 0, 8));
+            ratio = Math.round(modulate(Math.pow(lowerMaxFr, 0.2), 0, 1, 0, 8) + 30);
 
-            console.log("distance", distance);
-            return new THREE.IcosahedronGeometry(30, distance);
+            if (distance > 4) {
+                distance = distance - 5;
+            }
+
+            console.log("ratio", ratio);
+            return new THREE.IcosahedronGeometry(ratio, distance);
         }
 
         var mesh = new THREE.Mesh(createGeometry(), ballMaterial);
@@ -118,7 +129,7 @@ function play() {
                 distancePrevious = distance;
             }
             updateGeometry(mesh, createGeometry())
-
+            mesh.rotation.y += 0.005;
             requestAnimationFrame(animate);
             renderer.render(scene, camera);
         };
