@@ -1,152 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste Article</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/imagehover.css" rel="stylesheet" />
-    <link rel="icon" href="https://voltaire.bike/wp-content/uploads/2021/01/favicon-1-100x100.png" />
+    <title>Three.js</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <img src="assets/img/casque-dore.jpg" width="800px" alt="casque vélo doré">
-        <h1>Les accessoires</h1>
-    </header>
-    <main>
-        <section class="top-articles">
-            <h2>Top articles</h2>
-            <div id="top-articles">
-                <div class="article-top top-1">
-                    <a href="#">
-                        <p>Pompe à vélo<br><span class="prix">Prix €</span></p>
-                        <div>
-                            <img src="assets/img/pompe-a-velo.png">
-                            <p class="voir">Voir l'article 🠖</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="article-top top-2">
-                    <a href="#">
-                        <p>Eclairage<br><span class="prix">Prix €</span></p>
-                        <div>
-                            <img src="assets/img/eclairage.png">
-                            <p class="voir">Voir l'article 🠖</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <div id="content">
 
-        <section class="articles">
-            <h2>Nos articles</h2>
-            <div class="tri">
-                <p>Tri par pertinence</p>
-                <p><span class="see-four"> Voir 4</span> <span class="see-all">Voir tout</span></p>
-            </div>
+        <label for="thefile" class="file"> Choose an audio file
+          <input type="file" id="thefile" accept="audio/*" />
+        </label>
 
-            <div class="vue">
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/cape-de-pluie-voltigeur-urban-circus.jpeg">
-                            <figcaption>
-                                <img src="assets/img/cape-zoom1.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="articles/casque.html">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/casque-de-velo-urbain-heritage-thousand.jpeg">
-                            <figcaption>
-                                <img src="assets/img/casquedore-zoom.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/casque-de-velo-urbain-heritage-thousand.webp">
-                            <figcaption>
-                                <img src="assets/img/casquerouge-zoom.png">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/xbrassard-reflechissant-je-suis-vlo.jpg.pagespeed.ic.YwIRiOnEzH.webp">
-                            <figcaption>
-                                <img src="assets/img/brassard-zoom2.png">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/veste-legere-impermeable-ucrr3-urban-circus.jpeg">
-                            <figcaption>
-                                <img src="assets/img/veste-h-zoom.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/veste-legere-impermeable-ucrr3-urban-circus-2.jpeg">
-                            <figcaption>
-                                <img src="assets/img/veste-f-zoom.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/brassard-reflechissant-je-suis-vlo.jpeg">
-                            <figcaption>
-                                <img src="assets/img/brassard-zoom1.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <figure class="imghvr-push-up">
-                            <img src="assets/img/cape-de-pluie-voltigeur-urban-circus-2.jpeg">
-                            <figcaption>
-                                <img src="assets/img/cape-zoom2.jpeg">
-                            </figcaption>
-                        </figure>
-                        <p>Nom article<br><span class="prix">Prix €</span></p>
-                    </a>
-                </div>
+        <audio id="audio" controls></audio>
+        <div id="out"></div>
+    </div>
 
-            </div>
+    <script src="js/three.js"></script>
+    <script src="bibliotheque/SphereGeometry.js"></script>
+    <script src="bibliotheque/PointerLockControls.js"></script>
+    <script src="bibliotheque/IcosahedronGeometry.js"></script>
+    <script src="bibliotheque/SpotLight.js"></script>
+    <script src="bibliotheque/AmbientLight.js"></script>
+    <script src="bibliotheque/Mesh.js"></script>
+    <script src="script.js"></script>
 
-        </section>
-        <section class="pages">
-            <p>Page 1 2</p>
-        </section>
-
-    </main>
-    <footer></footer>
 </body>
 
 </html>
