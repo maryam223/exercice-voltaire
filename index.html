@@ -9,23 +9,57 @@
 <body>
     <div id="content">
 
-        <label for="thefile" class="file"> Choose an audio file
+        <label for="thefile" class="file"> Choose an audio to see the moon
           <input type="file" id="thefile" accept="audio/*" />
         </label>
 
         <audio id="audio" controls></audio>
         <div id="out"></div>
+
     </div>
 
+    <div class="keys">
+        <div data-key="65" class="key ">
+            <span class="sound"></span>
+        </div>
+        <div data-key="83" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="68" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="70" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="71" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="72" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="74" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="75" class="key">
+            <span class="sound"></span>
+        </div>
+        <div data-key="76" class="key">
+            <span class="sound"></span>
+        </div>
+    </div>
+
+    <audio data-key="81" src="sounds/clap.wav"></audio>
+    <audio data-key="83" src="sounds/hihat.wav"></audio>
+    <audio data-key="68" src="sounds/kick.wav"></audio>
+    <audio data-key="70" src="sounds/openhat.wav"></audio>
+    <audio data-key="71" src="sounds/boom.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tom.wav"></audio>
+
     <script src="js/three.js"></script>
-    <script src="bibliotheque/SphereGeometry.js"></script>
-    <script src="bibliotheque/PointerLockControls.js"></script>
-    <script src="bibliotheque/IcosahedronGeometry.js"></script>
-    <script src="bibliotheque/SpotLight.js"></script>
-    <script src="bibliotheque/AmbientLight.js"></script>
-    <script src="bibliotheque/Mesh.js"></script>
-    <script src="bibliotheque/PolyhedronGeometry.js"></script>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
