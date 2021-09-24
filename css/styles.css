@@ -265,6 +265,7 @@ label.file.normal {
 .title p {
     font-family: 'Saira', sans-serif;
     /*text-align: center;*/
+    margin-left: -20px;
 }
 
 #clavier {
