@@ -9,19 +9,81 @@
 <body>
     <div id="content">
 
-        <label for="thefile" class="file"> Choose an audio to see the moon
+        <label for="thefile" class="file"> Choisir un audio pour voir la lune
           <input type="file" id="thefile" accept="audio/*" />
         </label>
 
         <audio id="audio" controls></audio>
-        <div id="out"></div>
+        <div id="out">
+            <div id="clavier">
+                <div class="title">
+                    <p>Utilise ces touches<span> pour jouer de la musique</span></p>
+                </div>
+                <div class="clavier-resp">
+                    <div class="caseQ">
+                        <div class="boutonQ key" id="btnQ">
+                            <p>
+                                <a href="#">Q</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseS">
+                        <div class="boutonS key" id="btnS">
+                            <p>
+                                <a href="#">S</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseD">
+                        <div class="boutonD key" id="btnD">
+                            <p>
+                                <a href="#">D</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseF">
+                        <div class="boutonF key" id="btnF">
+                            <p>
+                                <a href="#">F</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseG">
+                        <div class="boutonG key" id="btnG">
+                            <p>
+                                <a href="#">G</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseH">
+                        <div class="boutonH key" id="btnH">
+                            <p>
+                                <a href="#">H</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseJ">
+                        <div class="boutonJ key" id="btnJ">
+                            <p>
+                                <a href="#">J</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="caseK">
+                        <div class="boutonK key" id="btnK">
+                            <p>
+                                <a href="#">K</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
+
     <div class="keys">
-        <div data-key="65" class="key ">
-            <span class="sound"></span>
-        </div>
         <div data-key="83" class="key">
             <span class="sound"></span>
         </div>
@@ -46,6 +108,16 @@
         <div data-key="76" class="key">
             <span class="sound"></span>
         </div>
+    </div>
+
+    <div class='stars' id="stars">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
     <audio data-key="81" src="sounds/clap.wav"></audio>

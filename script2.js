@@ -2,6 +2,9 @@ var vizInit = function() {
     var file = document.getElementById("thefile");
     var audio = document.getElementById("audio");
     var fileLabel = document.querySelector("label.file");
+    var clavier = document.getElementById("clavier");
+    var stars = document.getElementById("stars");
+
 
     document.onload = function(e) {
         console.log(e);
@@ -11,7 +14,9 @@ var vizInit = function() {
     file.onchange = function() {
         fileLabel.classList.add('normal');
         audio.classList.add('active');
+        clavier.classList.add('clavier-show');
         var files = this.files;
+        stars.style.display = "none";
 
         audio.src = URL.createObjectURL(files[0]);
         audio.load();
@@ -40,6 +45,7 @@ function play() {
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
+    console.log('window', window);
     var circle = new THREE.Object3D();
     var skelet = new THREE.Object3D();
     var particle = new THREE.Object3D();
@@ -291,7 +297,7 @@ function play() {
                         particuleSpe2.position.x += 3;
                         particuleSpe2.position.y += 5;
                         break;
-                        //S Particle 3
+                        //D Particle 3
                     case 68:
                         particuleSpe3.material.color.set(color);
                         particuleSpe3.rotateX(100);
@@ -451,22 +457,21 @@ function play() {
 
     }
 
-    function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    }
     audio.play();
 
 }
 
 //WINDOW_RESIZE
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
+    var factor = 1; // percentage of the screen
+    var w = window.innerWidth * factor;
+    var h = window.innerHeight * factor;
+    renderer.setSize(w, h);
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+window.addEventListener("resize", onWindowResize);
 window.onload = vizInit();
 
 //FONCTIONS CALCULS
