@@ -41,6 +41,15 @@ window.addEventListener("keydown", anim);
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', finAnim));
 
+document.getElementById('stars').addEventListener('animationend', stopAnim);
+
+function stopAnim(e) {
+    document.getElementById("stars").classList.remove('filante');
+    document.getElementById("stars").classList.add('stars');
+    document.getElementById("stars").style.display = "none";
+
+}
+
 
 function anim(e) {
     if (e.keyCode == 81) {

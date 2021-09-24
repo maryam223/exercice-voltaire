@@ -356,7 +356,7 @@ span:nth-child(1) {
     right: 0;
     left: initial;
     animation-delay: 0;
-    animation-duration: 1s;
+    animation-duration: 4s;
 }
 
 span:nth-child(2) {
